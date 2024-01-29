@@ -308,11 +308,33 @@ section {
   .navbar {
     padding: 0;
   }
+@media (min-width: 1280px) {
+  .row {
+    padding: 0;
+  }
+
+  .row ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+  }
+
+  .row li {
+    position: relative;
+  }
+
+  .row>ul>li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
 
   .navbar ul {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block;
     list-style: none;
     align-items: center;
   }
@@ -359,7 +381,11 @@ section {
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
-  }
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
 
   .navbar a:hover:before,
   .navbar li:hover>a:before,
@@ -1485,6 +1511,7 @@ section {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   background-size: cover;
@@ -1663,5 +1690,19 @@ section {
 @media (min-width: 768px) {
   .hero-subtitle {
     font-size: 2.5rem;
+  }
+}
+
+
+
+
+
+
+
+}
+
+@media (max-width: 550px) {
+  .top-header .top-header-bar {
+      line-height: 35px;
   }
 }
